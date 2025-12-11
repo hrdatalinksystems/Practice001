@@ -1,0 +1,50 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Web1",
+        "type": "WebActivity",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "method": "GET",
+          "headers": {},
+          "relativeUrl": {
+            "value": "@concat('/workspaces/',pipeline().DataFactory,'/dataPipelines')",
+            "type": "Expression"
+          }
+        },
+        "externalReferences": {
+          "connection": "6dc2cba8-ab2a-4837-a830-187b0f85dbc6"
+        }
+      },
+      {
+        "name": "Set variable1",
+        "type": "SetVariable",
+        "dependsOn": [],
+        "policy": {
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "variableName": "test_val",
+          "value": {
+            "value": "@concat('(',pipeline(),')')",
+            "type": "Expression"
+          }
+        }
+      }
+    ],
+    "variables": {
+      "test_val": {
+        "type": "String"
+      }
+    }
+  }
+}
