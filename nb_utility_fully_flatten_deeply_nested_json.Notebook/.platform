@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "nb_utility_fully_flatten_deeply_nested_json"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "41fcd523-e459-bb66-4685-77e1f18dcbe0"
+  }
+}
